@@ -1,7 +1,10 @@
-
 std::string userInput;
 std::vector<std::string> words;
-std::string a;
+std::vector<std::string> wrds;
+
+int a;
 int i;
+
+
 
 
