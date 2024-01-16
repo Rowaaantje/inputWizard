@@ -1,10 +1,8 @@
-std::string userInput;
-std::vector<std::string> words;
-std::vector<std::string> wrds;
+#include <iostream>
+#include <string>
+#include <vector>
+#include <cctype>
+#include <fstream>
 
-int a;
-int i;
-
-
-
+#include "manager.h"   
 
