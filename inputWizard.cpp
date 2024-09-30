@@ -1,7 +1,7 @@
 #include "inputWizard.h"
 
 int main()
-{
+{   
     Manager manager;
     
     manager.title();
