@@ -21,11 +21,11 @@ InputWizard is a C++ command-line tool designed for efficient file management an
 Type `help` for available commands:
 ``` cpp
     Available options:
-    [1] cnf.      {Create new file}
-    [2] of.       {Open File}
-    [3] ls.       {show list of str}
-    [4] cl.       {clear list of str}
-    [5] clear.    {clear terminal}
+    [1] cnf      {Create new file}
+    [2] of       {Open File}
+    [3] ls       {show list of str}
+    [4] cl       {clear list of str}
+    [5] clear    {clear terminal}
 ```
 ### File Management Operations
 #### 📁 Create Files

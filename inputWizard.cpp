@@ -1,10 +1,12 @@
 #include "inputWizard.h"
 
+
+
 int main()
 {   
+    Manager::title();
+
     Manager manager;
-    
-    manager.title();
 
     std::cout << "\n"
     << "Enter words: " << std::endl;

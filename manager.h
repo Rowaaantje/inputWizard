@@ -11,7 +11,7 @@
 class Manager {
 public:
    // Declarations...
-   void title();
+   static void title();
    void openFile();
    void createFile();
    void inputOptions(int switchInt);
@@ -31,7 +31,7 @@ private:
 
 // In manager.cpp or inputWizard.cpp
 void Manager::title() {
-    std::cout << "  ___   __    _  _______  __   __  _______  _     _  ___   _______  _______  ______    ______  "  << std::endl;
+    std::cout << "  ___   __    _  _______  __   __  _______  _     _  ___   _______  _______  ______    ______  " << std::endl;
     std::cout << " |   | |  |  | ||       ||  | |  ||       || | _ | ||   | |       ||   _   ||    _ |  |      | " << std::endl;
     std::cout << " |   | |   |_| ||    _  ||  | |  ||_     _|| || || ||   | |____   ||  |_|  ||   | ||  |  _    |" << std::endl;
     std::cout << " |   | |       ||   |_| ||  |_|  |  |   |  |       ||   |  ____|  ||       ||   |_||_ | | |   |" << std::endl;
@@ -71,7 +71,7 @@ void Manager::openFile() {
 }
 
 void Manager::createFile() {
-    std::cout << "\n" << "filename: "; // << std::endl
+    // std::cout << "\n" << "filename: "; // << std::endl
     std::cin >> filename;
 
     outFile.open(filename);
@@ -96,8 +96,8 @@ void Manager::inputOptions(int switchInt)
     switch (switchInt)
     {
     //  if input is list check if there are words in vector(list)
-    //  otherwise cout list first we give every words its according number
-    //  we use words[i-1] because the index of a vector starts from 0, not 1.
+    //  otherwise print list, first we give every words its according number
+    //  [i-1] because the index of a vector starts from 0, not 1.
     #pragma region showList
     case 1:
        
@@ -111,7 +111,7 @@ void Manager::inputOptions(int switchInt)
             {
                 for (unsigned int i = 1; i <= words.size(); i++) // a and i a is amount of words i amount of strings
                 {
-                    std::cout << "[" << i << "]" << words[i - 1] << " ";
+                    std::cout << "[" << i << "]" << words[i - 1] << " \n" ;
                 }
             }
         }
@@ -155,16 +155,13 @@ void Manager::inputOptions(int switchInt)
 
         if (userInput == "help")
         {
-            std::cout << "\n" << "Available options:\n";
-            std::cout << "[1] cnf.      {Create new file}\n";
-            std::cout << "[2] of.       {Open File}\n";
-            std::cout << "[3] ls.       {show list of str} \n";
-            std::cout << "[4] cl.       {clear list of str} \n";
-            std::cout << "[5] clear.    {clear terminal}\n";
-            
-
+            std::cout << "\n" << "Available options:";
+            std::cout << "[1] cnf       {Create new file}";
+            std::cout << "[2] of        {Open File}";
+            std::cout << "[3] ls        {show list of str}";
+            std::cout << "[4] cl        {clear list of str} ";
+            std::cout << "[5] clear     {clear terminal}";
         }
-
         break;
         #pragma endregion
 
